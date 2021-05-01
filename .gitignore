@@ -132,3 +132,5 @@ dmypy.json
 1101/*
 !1101/.gitkeep
 test.json
+
+.DS_Store
