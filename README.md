@@ -6,4 +6,4 @@ Jupyter Notebooks for Front Matter
 
 ### preprint-tweets
 
-Find all tweets from the last seven days referencing MedrXiv or BiorXiv DOIs, and list the 50 most tweeted DOIs with basic metadata (title, authors, description, publication date, archive, and subject area).
+Find all tweets from the last seven days referencing medRxiv or bioRxiv DOIs, and list the 50 most tweeted DOIs with basic metadata (title, authors, description, publication date, archive, and subject area).
