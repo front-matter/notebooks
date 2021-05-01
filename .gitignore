@@ -130,5 +130,5 @@ dmypy.json
 
 # output files
 1101/*
-!1101
+!1101/.gitkeep
 test.json
