@@ -130,4 +130,5 @@ dmypy.json
 
 # output files
 1101/*
+!1101
 test.json
