@@ -89,7 +89,7 @@ class restApi:
                         "doi": row["obj_id"][16:],
                         "tweets": row["count"],
                         "archive": jsonData["message"]["institution"]["name"],
-                        "subject-area": jsonData["message"]["group-title"],
+                        "subject-area": jsonData["message"]["group-title"] if "group-title" in jsonData["message"] else None,
                         "covid": re.search(r"(CoV-2|COVID)", (jsonData["message"]["title"][0] + jsonData["message"]["abstract"]), re.IGNORECASE) is not None,
                         "title": jsonData["message"]["title"][0],
                         "authors": jsonData["message"]["author"],
