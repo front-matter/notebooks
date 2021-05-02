@@ -131,6 +131,7 @@ dmypy.json
 # output files
 1101/*
 !1101/.gitkeep
+!1101/preprint_tweets.csv
 test.json
 
 .DS_Store
