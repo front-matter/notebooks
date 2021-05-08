@@ -92,8 +92,8 @@ class restApi:
                         "subject-area": jsonData["message"]["group-title"] if "group-title" in jsonData["message"] else None,
                         "covid": re.search(r"(CoV-2|COVID)", (jsonData["message"]["title"][0] + jsonData["message"]["abstract"]), re.IGNORECASE) is not None,
                         "title": jsonData["message"]["title"][0],
-                        "authors": jsonData["message"]["author"],
-                        "abstract": jsonData["message"]["abstract"],
+                        "authors": ', '.join(map(self.authorName, jsonData["message"]["author"])),
+                        "abstract": re.sub('^<title>.*?</title>', '', re.sub(r"jats:", "", jsonData["message"]["abstract"])),
                         "posted": self.date_parts_to_string(jsonData["message"]["posted"]["date-parts"][0])
                     }
                 else:
@@ -104,6 +104,9 @@ class restApi:
             else:
                 self.success = False
                 self.work = None
+
+    def authorName(self, a):
+        return ' '.join([a["given"] if "given" in a else '', a["family"] if "family" in a else ''])
 
     def date_parts_to_string(self, date_parts, fill: bool = False):
         # from https://manubot.github.io/manubot/reference/manubot/cite/csl_item/
