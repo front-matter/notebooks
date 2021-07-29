@@ -2,4 +2,4 @@
 
 ## rss-by-subject
 
-RSS feeds of tweeted preprints broken down by subject area, with a separate feed for all COVID-related preprints.
+RSS feeds of tweeted preprints broken down by ANZSRC Biological Sciences Groups, with a separate feed for all COVID-related preprints.
