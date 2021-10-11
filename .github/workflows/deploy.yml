@@ -1,0 +1,4 @@
+name: Deploy
+on:
+  schedule:
+    - cron:  '5 13 * * MON'
