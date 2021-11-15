@@ -4,4 +4,5 @@ glom==20.11.0
 altair==4.1.0
 vega==3.4.0
 feedgen==0.9.0
+lxml==4.6.4
 crossref-commons==0.0.7
